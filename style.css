@@ -4,3 +4,74 @@ Description: Custom WordPress theme for MBTMall 2023.
 Author: Your Name
 Version: 1.0
 */
+
+/* Reset some default styles for better consistency */
+body,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #0073e6;
+}
+
+/* Header Styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Main Content Styles */
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  float: right;
+  width: 30%;
+  margin: 0 0 20px 20px;
+}
+
+/* Post Styles */
+.post {
+  margin-bottom: 40px;
+}
+
+.post-title {
+  font-size: 24px;
+}
+
+.post-content {
+  font-size: 16px;
+  line-height: 1.5;
+}
