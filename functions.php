@@ -14,13 +14,16 @@ function mbtmall_enqueue_scripts() {
     // Enqueue styles
     wp_enqueue_style('mbtmall-style', get_stylesheet_uri());
 
+    // Enqueue jQuery (if not already loaded).
+    wp_enqueue_script('jquery');
+    
     // Enqueue scripts (e.g., custom.js)
-    wp_enqueue_script('mbtmall-custom', get_template_directory_uri() . '/js/custom.js', array('jquery'), '1.0', true);
+    //wp_enqueue_script('mbtmall-custom', get_template_directory_uri() . '/js/custom.js', array('jquery'), '1.0', true);
     
     // Add localized script data (e.g., passing PHP variables to JavaScript)
-    wp_localize_script('mbtmall-custom', 'mbtmall_data', array(
-        'ajax_url' => admin_url('admin-ajax.php'),
-    ));
+    // wp_localize_script('mbtmall-custom', 'mbtmall_data', array(
+    //     'ajax_url' => admin_url('admin-ajax.php'),
+    // ));
 }
 add_action('wp_enqueue_scripts', 'mbtmall_enqueue_scripts');
 
@@ -76,5 +79,23 @@ add_action('after_setup_theme', 'mbtmall_theme_support');
 /**
  * Add your custom functions below this line.
  */
+
+ /**
+  * Theme Options Customizer
+  */
+
+  require_once get_template_directory() . '/inc/theme-options-customizer.php';
+
+/**
+ * Include jQuery
+ */
+
+function custom_theme_enqueue_scripts() {
+
+}
+
+add_action('wp_enqueue_scripts', 'custom_theme_enqueue_scripts');
+
+
 
 ?>
